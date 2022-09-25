@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="nav_back" type="id"/>
+    <item name="status_bar" type="id" />
+    <item name="host_fragment" type="id" />
+
+    <item name="cameraFragment" type="id" />
+    <item name="momentFragment" type="id" />
+    <item name="friendsFragment" type="id" />
+    <item name="conversationFragment" type="id" />
+    <item name="profileFragment" type="id" />
+</resources>

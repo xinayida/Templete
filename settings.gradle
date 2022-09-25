@@ -1,0 +1,21 @@
+pluginManagement {
+    repositories {
+        gradlePluginPortal()
+        google()
+        mavenCentral()
+    }
+}
+dependencyResolutionManagement {
+    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+    repositories {
+        maven { url 'https://jitpack.io' }
+        google()
+        mavenCentral()
+        jcenter()
+    }
+}
+rootProject.name = "Templete"
+includeBuild("../VersionPlugin")
+include ':app'
+include ':common'
+include ':business-common'
