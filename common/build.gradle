@@ -1,4 +1,3 @@
-import com.hi.dhl.plugin.Dependencies
 
 plugins {
     id 'com.android.library'
@@ -35,79 +34,74 @@ android {
 }
 
 dependencies {
-    implementation 'androidx.databinding:viewbinding:4.2.2'
+    implementation 'androidx.databinding:viewbinding:7.2.2'
     testImplementation 'junit:junit:4.13.2'
     androidTestImplementation 'androidx.test.ext:junit:1.1.3'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
+    implementation "androidx.appcompat:appcompat:1.5.1"
 
-    implementation Dependencies.appcompat
-
-    //compose
-    api Dependencies.core_ktx
-    api Dependencies.Lifecycle.runtime
-    api Dependencies.Compose.activity_compose
-    api Dependencies.Compose.ui
-    api Dependencies.Compose.ui_tooling
-    api Dependencies.Compose.material
-    api Dependencies.Compose.navigation_compose
+//    //compose
+//    api "androidx.core:core-ktx:1.9.0"
+//    api "androidx.lifecycle:lifecycle-runtime-ktx:2.5.1"
+//    api "androidx.activity:activity-compose:1.5.1"
+//    api "androidx.compose.ui:ui:2.4.1"
+//    api "androidx.compose.ui:ui-tooling:2.4.1"
+//    api "androidx.compose.material:material:2.4.1"
+//    api "androidx.hilt:hilt-navigation-compose:1.0.0-rc01"
+//    api( "androidx.compose.material:material:2.4.0")
 
     //paging分页库
-    api(Dependencies.Page.compose)
-    api(Dependencies.Page.core)
+    api("androidx.paging:paging-compose:1.0.0-alpha14")
+    api("androidx.paging:paging-runtime:3.1.0")
 
     //mmkv
-    api(Dependencies.mmkv)
+    api("com.tencent:mmkv:1.2.13")
 
     //navigation
-    api(Dependencies.Compose.navigation_compose)
-    api(Dependencies.Compose.hilt_navigation_compose)
-    api "androidx.navigation:navigation-fragment-ktx:$nav_version"
-    api "androidx.navigation:navigation-ui-ktx:$nav_version"
+    api("androidx.navigation:navigation-compose:2.4.0")
+    api("androidx.hilt:hilt-navigation-compose:1.0.0-rc01")
+    api "androidx.navigation:navigation-fragment-ktx:2.5.2"
+    api "androidx.navigation:navigation-ui-ktx:2.5.2"
 
     //lifecycle
-    api(Dependencies.Lifecycle.livedata)
-    api(Dependencies.Lifecycle.runtime)
-    api(Dependencies.Lifecycle.viewmodel)
-    api(Dependencies.Lifecycle.savedstate)
+    api("androidx.lifecycle:lifecycle-livedata-ktx:2.5.1")
+    api("androidx.lifecycle:lifecycle-runtime-ktx:2.5.1")
+    api("androidx.lifecycle:lifecycle-viewmodel-ktx:2.5.1")
+    api("androidx.lifecycle:lifecycle-viewmodel-savedstate:2.5.1")
 
     //permission
-    api(Dependencies.xxpermission)
+    api("com.github.getActivity:XXPermissions:15.0")
 
     //http request
-    api(Dependencies.Retrofit.runtime)
-    api(Dependencies.Retrofit.gson_convert)
-    api(Dependencies.Retrofit.gson)
+    api("com.squareup.retrofit2:retrofit:2.9.0")
+    api("com.squareup.retrofit2:converter-gson:2.9.0")
 
     //gson
-    api(Dependencies.gson)
+    api("com.google.code.gson:gson:2.9.0")
 
     // accompanist
-    api(Dependencies.Accompanist.coil)
-    api(Dependencies.Accompanist.pager)
-    api(Dependencies.Accompanist.pager_indicator)
-    api(Dependencies.Accompanist.insets)
-    api(Dependencies.Accompanist.systemuicontroller)
-    api(Dependencies.Accompanist.swiperefresh)
-    api(Dependencies.Accompanist.flowlayout)
-    api(Dependencies.Accompanist.placeholder)
-    api(Dependencies.Accompanist.permission)
-
-    //material
-    api(Dependencies.material)
+    api("com.google.accompanist:accompanist-coil:0.15.0")
+    api("com.google.accompanist:accompanist-pager:0.24.11-rc")
+    api("com.google.accompanist:accompanist-pager-indicators:0.24.11-rc")
+    api("com.google.accompanist:accompanist-insets:0.24.11-rc")
+    api("com.google.accompanist:accompanist-systemuicontroller:0.24.11-rc")
+    api("com.google.accompanist:accompanist-swiperefresh:0.24.11-rc")
+    api("com.google.accompanist:accompanist-flowlayout:0.24.11-rc")
+    api("com.google.accompanist:accompanist-placeholder-material:0.24.11-rc")
+    api("com.google.accompanist:accompanist-permissions:0.24.11-rc")
+    api("com.google.accompanist:accompanist-navigation-animation:0.24.11-rc")
+    api("com.google.accompanist:accompanist-webview:0.24.11-rc")
 
     //datastore
-    api(Dependencies.dataStore)
+    api("androidx.datastore:datastore-preferences:1.0.0")
 
     //constraintlayout
-    api(Dependencies.constraintlayout)
-    api(Dependencies.constraintlayout_compose)
+    api("androidx.constraintlayout:constraintlayout:2.1.4")
+    api("androidx.constraintlayout:constraintlayout-compose:1.0.1")
 
-    //Accompanist
-    api(Dependencies.Accompanist.navigation_animation)
-    api(Dependencies.Accompanist.webview)
 
     //coil
-    api(Dependencies.coil)
+    api("io.coil-kt:coil-compose:2.1.0")
 
     // 状态栏 https://github.com/gyf-dev/ImmersionBar
     api "com.gyf.immersionbar:immersionbar:${immersionbar_version}"

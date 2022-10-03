@@ -22,7 +22,7 @@ object XLog {
     private const val DEFAULT_MESSAGE = "execute"
     private const val PARAM = "Param"
     private const val NULL = "null"
-    private const val TAG_DEFAULT = "LiveIn"
+    private const val TAG_DEFAULT = "XLog"
     private const val SUFFIX = ".java"
     const val JSON_INDENT = 4
     const val V = 0x1
@@ -52,11 +52,11 @@ object XLog {
     }
 
     fun v() {
-        printLog(V, null, DEFAULT_MESSAGE)
+        printLog(V, TAG_DEFAULT, DEFAULT_MESSAGE)
     }
 
     fun v(msg: Any?) {
-        printLog(V, null, msg)
+        printLog(V, TAG_DEFAULT, msg)
     }
 
     fun v(tag: String?, objects: Any) {
@@ -64,12 +64,12 @@ object XLog {
     }
 
     fun d() {
-        printLog(D, null, DEFAULT_MESSAGE)
+        printLog(D, TAG_DEFAULT, DEFAULT_MESSAGE)
     }
 
     @JvmStatic
     fun d(msg: Any?) {
-        printLog(D, null, msg)
+        printLog(D, TAG_DEFAULT, msg)
     }
 
     fun d(tag: String?, objects: Any?) {
@@ -81,11 +81,11 @@ object XLog {
     }
 
     fun i() {
-        printLog(I, null, DEFAULT_MESSAGE)
+        printLog(I, TAG_DEFAULT, DEFAULT_MESSAGE)
     }
 
     fun i(msg: Any?) {
-        printLog(I, null, msg)
+        printLog(I, TAG_DEFAULT, msg)
     }
 
     fun i(tag: String?, objects: Any?) {
@@ -93,11 +93,11 @@ object XLog {
     }
 
     fun w() {
-        printLog(W, null, DEFAULT_MESSAGE)
+        printLog(W, TAG_DEFAULT, DEFAULT_MESSAGE)
     }
 
     fun w(msg: Any?) {
-        printLog(W, null, msg)
+        printLog(W, TAG_DEFAULT, msg)
     }
 
     fun w(tag: String?, objects: Any?) {
@@ -105,12 +105,12 @@ object XLog {
     }
 
     fun e() {
-        printLog(E, null, DEFAULT_MESSAGE)
+        printLog(E, TAG_DEFAULT, DEFAULT_MESSAGE)
     }
 
     @JvmStatic
     fun e(msg: Any?) {
-        printLog(E, null, msg)
+        printLog(E, TAG_DEFAULT, msg)
     }
 
     fun e(tag: String?, objects: Any?) {
@@ -118,11 +118,11 @@ object XLog {
     }
 
     fun ex(e: Throwable) {
-        printException(null, null, e)
+        printException(TAG_DEFAULT, null, e)
     }
 
     fun ex(message: String?, e: Throwable) {
-        printException(null, message, e)
+        printException(TAG_DEFAULT, message, e)
     }
 
     fun ex(tag: String?, message: String?, e: Throwable?) {
@@ -130,11 +130,11 @@ object XLog {
     }
 
     fun a() {
-        printLog(A, null, DEFAULT_MESSAGE)
+        printLog(A, TAG_DEFAULT, DEFAULT_MESSAGE)
     }
 
     fun a(msg: Any?) {
-        printLog(A, null, msg)
+        printLog(A, TAG_DEFAULT, msg)
     }
 
     fun a(tag: String?, objects: Any) {
@@ -142,7 +142,7 @@ object XLog {
     }
 
     fun json(jsonFormat: String?) {
-        printLog(JSON, null, jsonFormat)
+        printLog(JSON, TAG_DEFAULT, jsonFormat)
     }
 
     fun json(tag: String?, jsonFormat: String?) {
@@ -150,7 +150,7 @@ object XLog {
     }
 
     fun xml(xml: String?) {
-        printLog(XML, null, xml)
+        printLog(XML, TAG_DEFAULT, xml)
     }
 
     fun xml(tag: String?, xml: String?) {
@@ -158,7 +158,7 @@ object XLog {
     }
 
     fun file(targetDirectory: File, msg: Any) {
-        printFile(null, targetDirectory, null, msg)
+        printFile(TAG_DEFAULT, targetDirectory, null, msg)
     }
 
     fun file(tag: String?, targetDirectory: File, msg: Any) {
@@ -170,11 +170,11 @@ object XLog {
     }
 
     fun debug() {
-        printDebug(null, DEFAULT_MESSAGE)
+        printDebug(TAG_DEFAULT, DEFAULT_MESSAGE)
     }
 
     fun debug(msg: Any?) {
-        printDebug(null, msg)
+        printDebug(TAG_DEFAULT, msg)
     }
 
     fun debug(tag: String?, objects: Any?) {

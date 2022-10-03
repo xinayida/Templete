@@ -6,4 +6,6 @@ import com.futuretech.templete.databinding.ActivityMainBinding
 
 class MainActivity : BaseVmActivity<ActivityMainBinding, BaseViewModel>() {
 
+    override fun initObserver() {
+    }
 }

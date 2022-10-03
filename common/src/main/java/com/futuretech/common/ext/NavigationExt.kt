@@ -41,18 +41,9 @@ fun FragmentActivity.nav(
 fun Fragment.navBack(@Nullable key: String? = null, @Nullable value: String? = null) {
     try {
         key?.let { navController.previousBackStackEntry?.savedStateHandle?.set(key, value) }
-
-//        // 当前为 mainFragment 执行返回直接结束
-//        if (navController.currentDestination?.id == R.id.mainFragment) {
-//            activity?.finish()
-//        }
-
         // 返回栈没有或一个 Fragment，直接结束 Activity
-        val backQueue = navController.backQueue
-        if (backQueue.isNullOrEmpty() || (backQueue.size == 2 && backQueue[0].destination.navigatorName == "navigation")) {
+        if (!navController.popBackStack()) {
             activity?.finish()
-        } else {
-            navController.popBackStack()
         }
     } catch (e: Exception) {
         XLog.ex(e)

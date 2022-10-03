@@ -8,5 +8,10 @@
         android:id="@+id/mainFragment"
         android:name="com.futuretech.templete.ui.main.MainFragment"
         android:label="MainFragment" />
+    <fragment
+        android:id="@+id/testFragment"
+        android:name="com.futuretech.templete.ui.test.TestFragment"
+        android:label="TestFragment" />
+
 
 </navigation>

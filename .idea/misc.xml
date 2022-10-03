@@ -5,6 +5,7 @@
       <map>
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.2028985507246377" />
         <entry key="app/src/main/res/layout/fragment_main.xml" value="0.23052536231884058" />
+        <entry key="app/src/main/res/layout/fragment_test.xml" value="0.20471014492753623" />
         <entry key="app/src/main/res/menu/menu_main.xml" value="0.23697916666666666" />
         <entry key="common/src/main/res/layout/layout_custom_progress_dialog_view.xml" value="0.22327898550724637" />
       </map>

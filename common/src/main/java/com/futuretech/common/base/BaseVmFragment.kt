@@ -53,7 +53,7 @@ abstract class BaseVmFragment<VB : ViewBinding, VM : BaseViewModel> : BaseFragme
         // 下面四个方法顺序不要调换
         viewModel = createViewModel()
         arguments?.let { initArguments(it) }
-        viewLifecycleOwner.initViewObserver()
+        initViewObserver()
         viewModel.onViewCreate(arguments ?: Bundle.EMPTY)
 
         super.onViewCreated(view, savedInstanceState)
@@ -85,7 +85,7 @@ abstract class BaseVmFragment<VB : ViewBinding, VM : BaseViewModel> : BaseFragme
      * LiveData 绑定 viewLifecycleOwner
      * 注意，在 onDestroyView 会解绑
      */
-    protected open fun LifecycleOwner.initViewObserver() {}
+    protected open fun initViewObserver() {}
 
     override fun getVM(): BaseViewModel {
         return viewModel

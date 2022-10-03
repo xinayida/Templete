@@ -816,3 +816,13 @@ fun Fragment.requestContactPermission(
             })
     }
 }
+
+fun <T> UnPeekLiveData<T>.observeSingleton(owner: LifecycleOwner, observer: Observer<in T>) {
+    removeObservers(owner)
+    observe(owner, observer)
+}
+
+fun <T> MutableLiveData<T>.observeSingleton(owner: LifecycleOwner, observer: Observer<in T>) {
+    removeObservers(owner)
+    observe(owner, observer)
+}

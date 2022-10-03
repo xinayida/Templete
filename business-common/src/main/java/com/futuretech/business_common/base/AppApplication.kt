@@ -8,6 +8,7 @@ import androidx.lifecycle.ViewModelStoreOwner
 import com.futuretech.common.base.appContext
 import com.futuretech.common.ext.currentProcessName
 import com.futuretech.common.lifecycle.KtxActivityLifecycleCallbacks
+import com.futuretech.common.utils.DataStoreUtils
 import com.hjq.toast.ToastUtils
 import com.hjq.toast.style.WhiteToastStyle
 
@@ -19,6 +20,7 @@ class AppApplication : Application(), ViewModelStoreOwner {
         super.onCreate()
         // Toast 不延迟 init
         ToastUtils.init(this, WhiteToastStyle())
+        DataStoreUtils.init(this)
         mAppViewModelStore = ViewModelStore()
         val processName = currentProcessName
         if (processName == packageName) {
